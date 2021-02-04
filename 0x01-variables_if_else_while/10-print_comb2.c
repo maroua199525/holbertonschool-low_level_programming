@@ -2,10 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+* main - Entry point
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
 int i;
@@ -20,8 +20,11 @@ if ((i == 57) && (j == 57))
 {
 putchar('\n');
 }
+else
+{
 putchar (',');
 putchar (' ');
+}
 }
 }
 return (0);

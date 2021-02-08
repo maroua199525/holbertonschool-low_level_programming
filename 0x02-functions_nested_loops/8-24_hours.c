@@ -7,7 +7,7 @@
 void jack_bauer(void)
 {
 int i;
-for (i = 48; j <= 57; i++)
+for (i = 48; i <= 57; i++)
 {
 _putchar(48);
 _putchar(48);
@@ -16,7 +16,7 @@ _putchar(48);
 _putchar(i);
 _putchar('\n');
 }
-for (i = 48; j <= 57; i++)
+for (i = 48; i <= 57; i++)
 {
 _putchar(50);
 _putchar(51);
@@ -26,3 +26,4 @@ _putchar(i);
 _putchar('\n');
 }
 }
+

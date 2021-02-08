@@ -4,16 +4,7 @@
 *
 * Return: Always 0 (Success)
 */
-int _abs(int n)
+int add(int a, int b)
 {
-if (n > 0)
-{
-return (n);
+return (a + b);
 }
-else
-{
-return (n * -1);
-}
-}
-
-

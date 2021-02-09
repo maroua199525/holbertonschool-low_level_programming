@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
-* main - Entry point
+* void print_alphabet_x10(void)
 *
-* Return: Always 0 (Success)
+* Return;
 */
 void print_alphabet_x10(void)
 {
@@ -16,6 +16,7 @@ _putchar(j);
 _putchar('\n');
 }
 }
+
 
 
 

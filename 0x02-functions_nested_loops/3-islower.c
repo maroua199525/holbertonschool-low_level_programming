@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
-* main - Entry point
-*
-* Return: Always 0 (Success)
+* int _islower(int c)
+* @c: an integer
+* Return 1 or 0;
 */
 int _islower(int c)
 {
@@ -13,6 +13,7 @@ return (1);
 else
 {
 return (0);
+}
 }
 
 

@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
-* main - Entry point
+* void print_alphabet
 *
-* Return: Always 0 (Success)
+* Return;
 */
 void print_alphabet(void)
 {
@@ -12,7 +12,8 @@ for (i = 97; i <= 122; i++)
 _putchar(i);
 _putchar('\n');
 }
-return;
 }
+
+
 
 

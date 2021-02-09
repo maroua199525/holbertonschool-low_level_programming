@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* int _abs(int n)
+*_abs - absolu
 *@n: integer
 * Return: abs(n)
 */
@@ -15,5 +15,6 @@ else
 return (n * (-1));
 }
 }
+
 
 

@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
 * times_table - print the table of nine
 *
@@ -6,7 +7,7 @@
 */
 void times_table(void)
 {
-int i, j;
+int r, i, j;
 for (i = 0; i <= 9; i++)
 {
 for (j = 0; j <= 9; j++)

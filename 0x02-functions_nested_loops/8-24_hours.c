@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* void jack_bauer(void)
+*jack_bauer - print time
 *
 * Return
 */
@@ -20,6 +20,7 @@ _putchar('\n');
 }
 }
 }
+
 
 
 

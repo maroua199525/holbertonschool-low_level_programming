@@ -6,12 +6,13 @@
 */
 void print_alphabet(void)
 {
-char ch;
-for (ch = '97'; ch <= '122'; ch++)
+int i;
+for (i = 97; i <= 122; i++)
 {
-_putchar(ch);
+_putchar(i);
 _putchar('\n');
 }
 return;
 }
+
 

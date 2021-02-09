@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
-* main - Entry point
+* void jack_bauer(void)
 *
-* Return: Always 0 (Success)
+* Return
 */
 void jack_bauer(void)
 {
@@ -20,6 +20,7 @@ _putchar('\n');
 }
 }
 }
+
 
 
 

@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* int print_sign(int n)
+* print_sign - print the signe
 *@n: integer
 * Return: either 0, 1 or -1
 */
@@ -22,6 +22,7 @@ _putchar('0');
 return (0);
 }
 }
+
 
 
 

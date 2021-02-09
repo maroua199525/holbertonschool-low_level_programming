@@ -2,7 +2,7 @@
 /**
 * int _islower(int c)
 * @c: an integer
-* Return 1 or 0;
+* Return either 1 or 0;
 */
 int _islower(int c)
 {
@@ -15,6 +15,7 @@ else
 return (0);
 }
 }
+
 
 
 

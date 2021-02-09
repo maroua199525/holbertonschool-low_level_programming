@@ -10,9 +10,10 @@ int b;
 b = (n % 10);
 if (b < 0)
 {
-b = (-1) * b;
-_putchar(b + '0');
+b = -b;
 }
+_putchar(b + '0');
 return (b);
 }
+
 

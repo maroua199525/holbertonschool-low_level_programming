@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
-* int _isalpha(int c)
+* _isalpha - print alphabetic
 * @c: the anteger
-* Return either 0 or 1;
+* Return: either 0 or 1;
 */
 int _isalpha(int c)
 {
@@ -15,6 +15,7 @@ else
 return (0);
 }
 }
+
 
 
 

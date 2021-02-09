@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* print_alphabet - print alphabet
+* print_alphabet_x10 - print alphabet
 *
 * Return;
 */
@@ -16,6 +16,7 @@ _putchar(j);
 _putchar('\n');
 }
 }
+
 
 
 

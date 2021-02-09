@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
-*multiply_5_3 - count multiple
+*main - count multiple
 *
 * Return:void
 */
-int multiply_5_3(void)
+void main(void)
 {
 	int i, sum;
 

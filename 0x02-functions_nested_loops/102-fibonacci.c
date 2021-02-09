@@ -13,11 +13,10 @@ int main(void)
 
 		for (i = 1; i <= 50; ++i)
 		{
-			printf("%d, ", t1);
+			printf("%d,\n", t1);
 			nextTerm = t1 + t2;
 			t1 = t2;
 			t2 = nextTerm;
 		}
-		printf("\n");
 		return (0);
 }

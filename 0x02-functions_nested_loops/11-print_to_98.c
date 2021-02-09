@@ -8,55 +8,33 @@
 void print_to_98(int n)
 {
 	int i;
+
 	if (n < 98)
 	{
 		for (i = n; i <= 98; i++)
 		{
-			if (i == n)
+			if (i != 98)
 			{
-				printf("%d", n);
+				printf("%d, ", i);
 			}
 			else
 			{
-			printf("%d", i);
-			}
-			if (i < 98)
-			{
-			printf(" ");
-			printf(",");
-			}
-			else
-			{
-				printf("\n");
-			}
-		}
-	}
-	else if (n > 98)
-	{
-		for (i = n; i >= 98; i--)
-		{
-			if (i == n)
-			{
-				printf("%d", n);
-			}
-			else
-			{
-				printf("%d", i);
-			}
-			if (i > 98)
-			{
-				printf(" ");
-				printf(",");
-			}
-			else
-			{
-				printf("\n");
+			printf("%d\n", i);
 			}
 		}
 	}
 	else
 	{
-	 printf("98");
+		for (i = n; i >= 98; i--)
+		{
+			if (i != 98)
+			{
+				printf("%d, ", i);
+			}
+			else
+			{
+				printf("%d\n", i);
+			}
+		}
 	}
-return (0);
 }

@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	unsigned int P, i, t1, Sum, t2, nextTerm;
+	long P, i, t1, Sum, t2, nextTerm;
 
 	t1 = 0;
 	t2 = 1;
@@ -23,6 +23,6 @@ int main(void)
 		Sum = Sum  + nextTerm;
 		}
 	}
-		printf("%u\n", Sum);
+		printf("%ld\n", Sum);
 		return (0);
 }

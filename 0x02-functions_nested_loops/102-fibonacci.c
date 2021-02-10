@@ -12,13 +12,15 @@ int main(void)
 	t1 = 0;
 	t2 = 1;
 
-		for (i = 0; i < 49; ++i)
+		for (i = 0; i <= 49; ++i)
 		{
 			nextTerm = t1 + t2;
 			t1 = t2;
 			t2 = nextTerm;
-			printf("%ld, ", nextTerm);
+			if (i != 49)
+				printf("%ld, ", nextTerm);
+			else
+				printf("%ld\n", nextTerm);
 		}
-			printf("%ld\n", nextTerm);
 			return (0);
 }

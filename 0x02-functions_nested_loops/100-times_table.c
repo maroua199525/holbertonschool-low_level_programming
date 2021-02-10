@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 /**
 * print_times_table - print the table of nine
 * @n:integer.
@@ -9,7 +9,7 @@ void print_times_table(int n)
 {
 	int r, i, j;
 
-	if (!(n > 15) && (n < 0))
+	if (!(n > 15) || (n < 0))
 	{
 		for (i = 0; i <= n; i++)
 		{

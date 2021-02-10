@@ -1,9 +1,9 @@
-#include <stdio.h>
+#include<stdio.h>
 /**
- *main - print Fibonacci numbers
- *
- * Return:void
- */
+*main - print Fibonacci numbers
+*
+* Return:void
+*/
 int main(void)
 {
 	int i, t1, t2, nextTerm;
@@ -13,10 +13,9 @@ int main(void)
 
 		for (i = 1; i <= 50; ++i)
 		{
-			printf("%d,\n", t1);
 			nextTerm = t1 + t2;
 			t1 = t2;
 			t2 = nextTerm;
 		}
 		return (0);
-}c
+}

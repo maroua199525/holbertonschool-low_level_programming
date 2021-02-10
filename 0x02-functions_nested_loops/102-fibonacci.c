@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 /**
 *main - print Fibonacci numbers
@@ -6,7 +7,7 @@
 */
 int main(void)
 {
-	int i, t1, t2, nextTerm;
+	long int  i, t1, t2, nextTerm;
 
 	t1 = 0;
 	t2 = 1;
@@ -16,8 +17,8 @@ int main(void)
 			nextTerm = t1 + t2;
 			t1 = t2;
 			t2 = nextTerm;
-			printf("%d, ", nextTerm);
+			printf("%ld, ", nextTerm);
 		}
-		printf("\n");
-		return (0);
+			printf("\n");
+			return (0);
 }

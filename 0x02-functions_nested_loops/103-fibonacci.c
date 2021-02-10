@@ -6,13 +6,12 @@
 */
 int main(void)
 {
-	long P, i, t1, Sum, t2, nextTerm;
+	long P, t1, Sum, t2, nextTerm;
 
 	t1 = 0;
 	t2 = 1;
 	P = 4000000;
 	Sum = 0;
-	i = 0;
 	while (Sum < P)
 	{
 		nextTerm = t1 + t2;

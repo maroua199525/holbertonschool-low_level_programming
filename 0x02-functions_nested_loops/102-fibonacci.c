@@ -18,6 +18,6 @@ int main(void)
 			t2 = nextTerm;
 			printf("%d, ", nextTerm);
 		}
-		printf("%d");
-
+		printf("\n");
+		return (0);
 }

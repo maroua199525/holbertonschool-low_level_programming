@@ -40,3 +40,4 @@ void print_number(int n)
 			_putchar((((n % 10000) % 1000) % 100) % 10 + '0');
 		}
 }
+

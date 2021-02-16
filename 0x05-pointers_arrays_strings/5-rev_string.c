@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * rev_string - length of string
  *@s:a string
@@ -7,24 +6,22 @@
  */
 void rev_string(char *s)
 {
-	int length, i, j, ch;
+	int i, j;
+	char ch;
 
-	length = 0;
 	i = 0;
-	while (*(s + i) != '\0')
+	while (s[i] != '\0')
 	{
-		length = length + 1;
 		i++;
 	}
-	j = length - 1;
-	i = 0;
+	j = 0;
 	{
-		while (i <= length / 2)
+		while (j <= (i -1) / 2)
 		{
-			ch = *(s + i);
-			*(s + i) = *(s + j - i);
-			*(s + j - i) = ch;
-			i++;
+			ch = s[j];
+			s[j] = s[i - 1 - j];
+			s[i - 1 - j] = ch;
+			j++;
 		}
 	}
 }

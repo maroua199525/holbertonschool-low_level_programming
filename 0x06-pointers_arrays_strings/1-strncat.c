@@ -1,0 +1,22 @@
+/**
+ * _strncat - concat two strings
+ *@src:a string
+ *@dest:a string
+ *@n: integer
+ * Return:dest
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+	int i, j;
+
+	for (i = 0; dest[i] != '\0'; i++)
+	{
+		i++;
+	}
+	for (j = 0; j < n; j++)
+	{
+		dest[i + j + 1] = src[j];
+	}
+	dest[i + j + 1] = '\0';
+	return (dest;
+}

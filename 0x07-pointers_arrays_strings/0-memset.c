@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
  * *_memset - fills memory with a constant byte
- *@s:string
- *@b:string
+ *@s:char
+ *@b:constant byte
  *@n:unsigned int
- *Return:s
+ *Return:pointer to a memory area s.
  */
 char *_memset(char *s, char b, unsigned int n)
 {

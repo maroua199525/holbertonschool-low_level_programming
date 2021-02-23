@@ -3,7 +3,7 @@
  * *_strstr - locates a string in a string
  *@haystack:string
  *@needle:string
- *Return:haystack
+ *Return:Null
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -17,8 +17,9 @@ char *_strstr(char *haystack, char *needle)
 		{
 			if (haystack[i] == needle[j])
 				return (&haystack[i]);
-			i++;
+			break;
 		}
+		i++;
 		j++;
 	}
 	return (0);

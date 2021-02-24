@@ -11,7 +11,7 @@ int factorial(int n)
 	if ((n - 1) < 0)
 		return (0);
 	if ((n - 1) == 0)
-		m = 0;
+		m = 1;
 	else
 		m = ((n - 1) * factorial(n - 2));
 	if ((m + 1) % n == 0)
@@ -21,7 +21,7 @@ int factorial(int n)
 }
 #include "holberton.h"
 /**
- * factorial - print factorial
+ * is_prime_number - print factorial
  *@n:integer
  * Return:m
  */

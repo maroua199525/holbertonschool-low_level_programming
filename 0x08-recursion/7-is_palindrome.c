@@ -16,6 +16,7 @@ int _strlen_recursion(char *s)
 		{
 			m = 1 + _strlen_recursion(s + 1);
 		}
+	return(m);
 }
 #include "holberton.h"
 /**
@@ -41,7 +42,7 @@ int is_palind_drome(char *s, int m, int j)
 int is_palindrome(char *s)
 {
 	int m = _strlen_recursion(s);
-	is_palind_drome(s, m - 1, 0);
+	return (is_palind_drome(s, m - 1, 0));
 }
 
 	

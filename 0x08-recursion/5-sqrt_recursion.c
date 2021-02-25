@@ -5,12 +5,12 @@
  *@b:integer
  * Return:m
  */
-int _is_sqrt(int i, int b)
+int _is_sqrt(int b, int i)
 {
 
-	if ((i * i) > 0)
+	if ((i * i) > b)
 		return (-1);
-	else if (i * i == n)
+	else if (i * i == b)
 		return (i);
 	return (_is_sqrt(b, i + 1));
 }
@@ -26,5 +26,5 @@ int _sqrt_recursion(int n)
 		return (0);
 	else if (n < 1)
 		return (-1);
-	return (_is_sqrt(1, b));
+	return (_is_sqrt(n, 0));
 }

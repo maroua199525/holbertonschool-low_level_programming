@@ -28,6 +28,10 @@ int _strlen_recursion(char *s)
  */
 int is_palind_drome(char *s, int m, int j)
 {
+	if (*s == '\0')
+	{
+		return (1);
+	}
 	if (s[j] == s[m - j])
 	{
 		(is_palind_drome(s, m, j + 1));

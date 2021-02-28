@@ -19,9 +19,9 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	piece = atoi(argv[1]);
-	if (piece < 0)
+	if (piece <= 0)
 		printf("0\n");
-	for (i = 0; i < 5 && piece != 0; i++)
+	for (i = 0; i < 5; i++)
 	{
 		S = S + (piece / cents[i]);
 		piece = piece % cents[i];

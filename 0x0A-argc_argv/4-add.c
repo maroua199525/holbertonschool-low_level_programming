@@ -1,6 +1,6 @@
 #include <ctype.h>
 #include <stdlib.h>
-#include <stdio.h> 
+#include <stdio.h>
 /**
  * main - print name program
  *@argc:integer

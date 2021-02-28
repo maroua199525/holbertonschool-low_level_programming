@@ -9,24 +9,24 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, S;
-	int cents[5] = {1, 2, 5, 10, 25};
+	int cents[5] = {25, 10, 5, 2, 1};
+	int i, S, piece;
 
+	S = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else
+	piece = atoi(argv[1]);
+	if (piece <= 0)
+		printf("0\n");
+	for (i = 0; i < 5; i++)
 	{
-		for (i = 0; i < 5; i++)
-		{
-			if (atoi(argv[1]) < 0)
-				printf("0\n");
-			else if (atoi(argv[1]) >= cents[i])
-				S = (atoi(argv[1]) / cents[i]) + (atoi(argv[1]) % cents[i]);
-		}
+		S = S + (piece / cents[i]);
+		piece = piece % cents[i];
 	}
+
 	printf("%d\n", S);
 	return (0);
 }

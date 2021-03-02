@@ -12,12 +12,12 @@ char *_strdup(char *str)
 
 	if (str == '\0')
 		return (NULL);
-	p = malloc(2 * sizeof(str));
+	p = malloc(sizeof(str));
 	if (p == NULL)
 		return (0);
 	for (i = 0; str[i] != '\0'; i++)
-		{
-			p[i] = str[i];
-		}
+	{
+		p[i] = str[i];
+	}
 	return (p);
 }

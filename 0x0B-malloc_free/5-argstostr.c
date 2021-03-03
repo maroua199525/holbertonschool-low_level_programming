@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  *argstostr - create a string
- *:@ac:integer
+ *@ac:integer
  *@av:string
  *Return: 0
  */
@@ -22,7 +22,7 @@ char *argstostr(int ac, char **av)
 	n = 0;
 	p = malloc(sizeof(char) * (len + ac + 1));
 	if (p == NULL)
-		return (NULL);	
+		return (NULL);
 	for (j = 0; j < ac; j++)
 	{
 		for (k = 0; av[j][k] != '\0'; k++)
@@ -31,7 +31,7 @@ char *argstostr(int ac, char **av)
 			n++;
 		}
 			p[n++] = '\n';
-	p[n] = '\0';
 	}
+	p[n] = '\0';
 	return (p);
 }

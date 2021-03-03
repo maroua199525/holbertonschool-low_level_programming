@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 #include <stdlib.h>
 /**
  * alloc_grid - create an array of integers
@@ -22,9 +22,9 @@ int **alloc_grid(int width, int height)
 		array[i] = malloc(width * sizeof(int));
 		if (array[i] == NULL)
 		{
-			for (K = 0; k < i; k++)
-				free(a[k]);
-			free(a);
+			for (k = 0; k < i; k++)
+				free(array[k]);
+			free(array);
 			return (NULL);
 		}
 		for (j = 0; j < width; j++)

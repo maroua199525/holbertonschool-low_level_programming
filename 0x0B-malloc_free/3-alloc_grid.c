@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 #include <stdlib.h>
 /**
  * alloc_grid - create an array of integers
@@ -8,7 +8,7 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int i, j;
+	int i, j, k;
 	int **array;
 
 	if (width <= 0 || height <= 0)

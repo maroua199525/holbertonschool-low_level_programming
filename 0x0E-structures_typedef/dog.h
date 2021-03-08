@@ -1,5 +1,11 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
+/**
+ *struct dog - print describe dog
+ *@name: char
+ *@age:float
+ *@owner:char
+ */
 struct dog
 {
 	char *name;

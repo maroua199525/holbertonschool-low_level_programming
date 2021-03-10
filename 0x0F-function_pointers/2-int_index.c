@@ -15,10 +15,10 @@ int int_index(int *array, int size, int (*cmp)(int))
 		return (-1);
 	if (cmp == NULL)
 		return (0);
+	if (array == NULL)
+		return (0);
 	for (i = 0; i < size; i++)
 	{
-		if (array == NULL)
-			return (0);
 		m = (*cmp)(array[i]);
 		if (m != 0)
 			return (i);

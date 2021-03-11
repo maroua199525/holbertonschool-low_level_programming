@@ -10,7 +10,7 @@ int op_add(int a, int b)
 {
 	int sum;
 
-	Sum = a + b;
+	sum = a + b;
 	return (sum);
 }
 #include "3-calc.h"
@@ -54,7 +54,7 @@ int op_mul(int a, int b)
 int op_div(int a, int b)
 {
 	int div;
-	
+
 	div = (a / b);
 	return (div);
 }

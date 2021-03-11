@@ -1,6 +1,6 @@
 section .data;.data starts here
-msg db 10d,13d,"Hello, Holberton " ;String gets initialized
-		l equ $-msg	;Length Of String
+msg db "Hello, Holberton " ;String gets initialized
+	
 section .text;.text starts here
 		global _start;Moving to _start
 _start:;_start label

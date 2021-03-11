@@ -2,7 +2,7 @@ section .data
 msg db "Hello, Holberton ",10 ;String gets initialized
 section .text;.text starts here
 global main;Moving to main
-main:;_start label
+main:;main label
 mov rax,1;Sys_Write Function
 mov rdi,1;Std_Out File Descriptor
 mov rsi,msg;Offset of msg

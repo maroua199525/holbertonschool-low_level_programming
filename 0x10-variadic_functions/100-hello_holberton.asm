@@ -1,6 +1,5 @@
 section .data;.data starts here
 msg db "Hello, Holberton " ;String gets initialized
-	
 section .text;.text starts here
 		global _start;Moving to _start
 _start:;_start label

@@ -24,11 +24,11 @@ int _strlen(char *s)
  * @c: char
  * Return: always 1
  */
-int print_c(va_list ch)
+int character(va_list c);
 {
-	char C = va_arg(c, int);
+	char ch = va_arg(c, int);
 
-	_putchar(C);
+	_putchar(ch);
 	return (1);
 }
 
@@ -43,7 +43,7 @@ int _print_string(va_list S)
 	char * str = va_arg(S, char*);
 	
 	if (str == NULL)
-		str = "(nill)";
+		str = "(null)";
 
 	while (str[len] != '\0')
 	{
@@ -54,8 +54,8 @@ int _print_string(va_list S)
 }
 
 /**
- *	_puts_recursion - print string
- *@s:string
+ *	_print_r - print reverse string
+ *@rvs:string
  * Return : count;
  *int _strlen(char *s)
  */
@@ -79,7 +79,7 @@ int print_r(va_list rvs)
  * @n:integer
  * Return: count; 
  */
-int print_integer(va_list i);
+int _print_integer(va_list i);
 {
 	int count = 0, rest = 1;
 	unsigned int x;
@@ -105,7 +105,7 @@ int print_integer(va_list i);
 	}
 	return (count);
 }
-int print_binary(va_list b);
+int _print_binary(va_list b);
 {
 	int count = 0, rest = 2;
 	unsigned int x;
@@ -131,13 +131,13 @@ int print_binary(va_list b);
 }
 #include "holberton.h"
 /**
- * *rot13 - rot string
+ * _print_rot13 - print rot string
  *@s:string
  *Return:str
  */
-int *rot13(va_list s)
+int _print_rot13(va_list s)
 {
-	char *str = va_arg(s, int);
+	char *str = (char)va_arg(s, int);
 	int i, j;
 	char ch1[] = "ABCDEFGHIJKLMabcdefghijklmNOPQRSTUVWXYZnopqrstuvwxyz";
 	char ch2[] = "NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm";
@@ -150,10 +150,17 @@ int *rot13(va_list s)
 					if (str[i] == ch1[j])
 						{
 							str[i] = ch2[j];
+							_putchar(str[i]);
 							break;
 						}
 				}
 			i++;
 		}
 	return (i);
+}
+int print_percent(va_list arg)
+{
+	(void)arg;
+	_putchar('%');
+	return (1);
 }

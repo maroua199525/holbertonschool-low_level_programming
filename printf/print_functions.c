@@ -105,29 +105,33 @@ int _print_integer(va_list i);
 	}
 	return (count);
 }
-int _print_binary(va_list b);
+/**
+ * print_binary_int - print binary intger
+ * @arg: argument of type va_list
+ * return: number of elements printed
+ */
+unsigned int _print_binary(va_list n)
 {
-	int count = 0, rest = 2;
-	unsigned int x;
-	int n = va_arg(i, int);
-
-	x = n;
-	if (n < 0)
-	{
-		_putchar('-');
-		x = -x;
-		count++;
-	}
-	while ((x / rest) > 0)
-	{
-		x = (x / rest);
-	}
-	while ((x / rest) > 0)
-	{
-		_putchar((x % rest) + '0');
-		count++;
-	}
-	return (count);
+unsigned int num, div, o, Count = 0, i;
+	num = n;
+	div = 1;
+	if (num > 0)
+		{
+			while ((num / 10) != 0)
+				{
+					num = num / 10;
+					div = div * 10;
+				}
+			while (div >= 1)
+				{
+					i = n / div;
+					_putchar(i + '0');
+					n = n % div;
+					div = div / 10;
+					Count++;
+				}
+		}
+	return (Count);
 }
 #include "holberton.h"
 /**

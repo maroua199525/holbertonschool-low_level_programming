@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 			fun = check_char_func(*(format + (i + 1))
 		if (fun != NULL)
 		{
-			count = count + f(va_list);
+			count = count + fun(va_list);
 			i = i + 2
 				continue;
 		}

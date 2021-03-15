@@ -66,6 +66,8 @@ int print_r(va_list rvs)
 	
 	str = va_arg(rvs, char*);
 	j = _strlen(str) - 1;
+	if (str == NULL)
+		str = "(llun(";
 	while (j >= 0)
 	{
 		_putchar(s[j]);
@@ -98,8 +100,8 @@ int _print_integer(va_list i);
 	}
 	while (rest > 0)
 	{
-		_putchar(x / mod + '0');
-		x = (x % mod);
+		_putchar(x / rest + '0');
+		x = (x % rest);
 		rest = rest / 10;
 		count++;
 	}
@@ -112,25 +114,6 @@ int _print_integer(va_list i);
  */
 unsigned int _print_binary(va_list n)
 {
-unsigned int num, div, o, Count = 0, i;
-	num = n;
-	div = 1;
-	if (num > 0)
-		{
-			while ((num / 10) != 0)
-				{
-					num = num / 10;
-					div = div * 10;
-				}
-			while (div >= 1)
-				{
-					i = n / div;
-					_putchar(i + '0');
-					n = n % div;
-					div = div / 10;
-					Count++;
-				}
-		}
 	return (Count);
 }
 #include "holberton.h"
@@ -139,9 +122,9 @@ unsigned int num, div, o, Count = 0, i;
  *@s:string
  *Return:str
  */
-int _print_rot13(va_list s)
+int _print_rot13(va_list RT)
 {
-	char *str = (char)va_arg(s, int);
+	char *str = (char)va_arg(RT, int);
 	int i, j;
 	char ch1[] = "ABCDEFGHIJKLMabcdefghijklmNOPQRSTUVWXYZnopqrstuvwxyz";
 	char ch2[] = "NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm";

@@ -1,7 +1,7 @@
 #ifndef PRINTF_H
 #define PRINTF_H
 /**
- * struct op - Struct op
+ * struct printf - Struct printf
  *
  * @ch: The character
  * @fun: The function associated
@@ -13,13 +13,12 @@ typedef struct printf
 	int (*fun)(va_list);
 } printf_t;
 /* functions prototypes */
-int _puts_character(char ch);
-int _puts_string(char *s);
-int _puts_integer(va_list i);
-int _puts_decimal(va_list d);
-int _puts_int print_i(va_list i);
-int _puts_decimal(va_list d);
-int _puts_u(va_list u);
-int _puts_b(va_list b);
+int _strlen(char *s);
+int _print_character(va_list c);
+int _print_string(va_list *S);
+int _print_integer(va_list i);
+int _print_decimal(va_list d);
+int _print_integer(va_list i);
+int _print_binary(va_list b);
 #endif /* PRINTF_H */
 

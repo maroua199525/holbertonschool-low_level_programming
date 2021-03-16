@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 #include <stdlib.h>
 #include <stdarg.h>
 /**
@@ -36,8 +36,9 @@ int _printf(const char *format, ...)
 				_putchar(*(format + i));
 				count++;
 			}
-			i++;
+			
 		}
+		i++;
 	}
 	va_end(arg);
 	return (count);

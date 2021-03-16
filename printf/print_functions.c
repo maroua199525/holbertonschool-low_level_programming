@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _print_character - print a char
+ * print_character - print a char
  * @arg: argument of type va_list
  * Return: always 1
  */
@@ -13,7 +13,7 @@ int print_character(va_list arg)
 	return (1);
 }
 /**
- *_print_string - print a string
+ *print_string - print a string
  *@arg: argument of type va_list
  * Return: len
  */
@@ -34,7 +34,7 @@ int print_string(va_list arg)
 	return (len);
 }
 /**
- *_print_rev_string - print reverse string
+ *print_rev_string - print reverse string
  *@arg: argument of type va_list
  * Return :count
  */
@@ -58,7 +58,7 @@ int print_rev_string(va_list arg)
 	return (count);
 }
 /**
- * print_number -print number putchar
+ * print_integer -print number putchar
  * @arg: argument of type va_list
  * Return: count; 
  */
@@ -89,9 +89,9 @@ int print_integer(va_list arg)
 	return (count);
 }
 /**
- * _print_rot13 - print rot string
- *@arg: argument of type va_list
- *Return:str
+ * print_rot13 - print rot string
+ * @arg: argument of type va_list
+ * Return:str
  */
 int print_rot13(va_list arg)
 {
@@ -117,7 +117,7 @@ int print_rot13(va_list arg)
 	return (i);
 }
 /**
- *_print_percent - print_percent
+ *print_percent - print_percent
  *@arg:argument of type va_list
  * Return:1
  */
@@ -127,4 +127,19 @@ int print_percent(va_list arg)
 
 	_putchar('%');
 	return (1);
+}
+/**
+ * print_binary - print binary
+ * @arg: argument of type va_list
+ * Return: count
+ */
+int print_binary(va_list arg)
+{
+	int count;
+
+	n = va_arg(arg, int);
+	if ((n / 2) > 0)
+	count = 1 + print_binary(n / 2);
+	putchar('0' + (n % 2));
+	return (count);
 }

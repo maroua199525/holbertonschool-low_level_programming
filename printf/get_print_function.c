@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdlib.h>
 /**
  * check_char_func - check depending on separator
  * @s: char

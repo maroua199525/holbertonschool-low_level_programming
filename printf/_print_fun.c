@@ -1,6 +1,4 @@
-B#include "holberton.h"
-#include <stdlib.h>
-#include <stdarg.h>
+#include "holberton.h"
 /**
  * _printf - print all (printf recreation)
  * @format: format specifier

@@ -4,9 +4,9 @@
 
 /**
  * new_line_fun - function that prints a character
- * return: number of character printed
+ * return:1
  */
-int new_line(void)
+int new_line_fun(void)
 {
 	_putchar('\n');
 	return (1);

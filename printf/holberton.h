@@ -5,9 +5,8 @@
 #include <stdarg.h>
 #include <string.h>
 /**
- *format_specifier - defines a structure for format
- * struct printf - Struct printf
- * @ch: The character
+ * struct printf - struct printf
+ * @c: The character
  * @fun: The function associated
  */
 typedef struct printf
@@ -23,7 +22,9 @@ int _putchar(char c);
 int print_character(va_list arg);
 int print_percent(va_list arg);
 int print_string(va_list arg);
-int print_integer(va_list arg)
-nt print_rev_string(va_list arg)
+int print_integer(va_list arg);
+int print_rev_string(va_list arg);
 int print_rot13(va_list arg);
+int print_binary(va_list arg);
+int binary(unsigned int n);
 #endif /* PRINTF_H */

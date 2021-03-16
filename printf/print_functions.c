@@ -2,45 +2,44 @@
 #include <stdlib.h>
 #include <stdarg.h>
 /**
- * _strlen - length of string
+ *_strlen - length of string
  *@s:string
  * Return: length
  */
 int _strlen(char *s)
 {
-	int length, i;
+	int length = 0;
 
-	i = 0;
-	while (s[i] != '\0')
-		{
-			length = length + 1;
-			i++;
-		}
+	while (s[length] != '\0')
+	{
+		length = length + 1;
+	}
 	return (length);
 }
 
 /**
- * _print_char - print a char
- * @c: char
+ * _print_character - print a char
+ * @arg: argument of type va_list
  * Return: always 1
  */
-int character(va_list c);
+int _print_character(va_list arg)
 {
-	char ch = va_arg(c, int);
+	char ch;
 
+	ch = va_arg(arg, int);
 	_putchar(ch);
 	return (1);
 }
 
 /**
- *	_print_string - print a string
- *@s:string
+ *_print_string - print a string
+ *@arg: argument of type va_list
  * Return: len
  */
-int _print_string(va_list S)
+int _print_string(va_list arg)
 {
 	int len = 0;
-	char * str = va_arg(S, char*);
+	char * str = va_arg(arg, char*);
 	
 	if (str == NULL)
 		str = "(null)";
@@ -52,40 +51,43 @@ int _print_string(va_list S)
 	}
 	return (len);
 }
-
+#include "holberton.h"
+#include <stdlib.h>
+#include <stdarg.h>
+int _strlen(char *s);
 /**
- *	_print_r - print reverse string
- *@rvs:string
- * Return : count;
- *int _strlen(char *s)
+ *_print_rev_string - print reverse string
+ *@arg: argument of type va_list
+ * Return :count
  */
-int print_r(va_list rvs)
+int _print_rev_string(va_list arg)
 {
 	char *str;
 	int i = 0, count = 0;
 	
-	str = va_arg(rvs, char*);
-	j = _strlen(str) - 1;
+	str = va_arg(arg, char*);
 	if (str == NULL)
 		str = "(llun(";
-	while (j >= 0)
+	i = _strlen(str) - 1;
+	while (i >= 0)
 	{
-		_putchar(s[j]);
-		j--;
+		_putchar(str[i]);
+		i--;
 		count++;
 	}
 	return (count);
 }
+#include <stdarg.h>
 /**
  * print_number -print number putchar
- * @n:integer
+ * @arg: argument of type va_list
  * Return: count; 
  */
-int _print_integer(va_list i);
+int _print_integer(va_list arg)
 {
 	int count = 0, rest = 1;
 	unsigned int x;
-	int n = va_arg(i, int);
+	int n = va_arg(arg, int);
 
 	x = n;
 	if (n < 0)
@@ -108,46 +110,42 @@ int _print_integer(va_list i);
 	return (count);
 }
 /**
- * print_binary_int - print binary intger
- * @arg: argument of type va_list
- * return: number of elements printed
- */
-unsigned int _print_binary(va_list n)
-{
-	return (Count);
-}
-#include "holberton.h"
-/**
  * _print_rot13 - print rot string
- *@s:string
+ *@arg: argument of type va_list
  *Return:str
  */
-int _print_rot13(va_list RT)
+int _print_rot13(va_list arg)
 {
-	char *str = (char)va_arg(RT, int);
+	char *str = va_arg(arg, int);
 	int i, j;
 	char ch1[] = "ABCDEFGHIJKLMabcdefghijklmNOPQRSTUVWXYZnopqrstuvwxyz";
 	char ch2[] = "NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm";
 
 	i = 0;
 	while (str[i] != '\0')
+	{
+		for (j = 0; j < 52; j++)
 		{
-			for (j = 0; j < 52; j++)
-				{
-					if (str[i] == ch1[j])
-						{
-							str[i] = ch2[j];
-							_putchar(str[i]);
-							break;
-						}
-				}
-			i++;
+			if (str[i] == ch1[j])
+			{
+				str[i] = ch2[j];
+				_putchar(str[i]);
+				break;
+			}
 		}
+			i++;
+	}
 	return (i);
 }
+/**
+ *_print_percent - print_percent
+ *@arg:argument of type va_list
+ * Return:1
+ */
 int print_percent(va_list arg)
 {
 	(void)arg;
+
 	_putchar('%');
 	return (1);
 }

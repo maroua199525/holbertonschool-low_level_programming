@@ -1,28 +1,10 @@
 #include "holberton.h"
-#include <stdlib.h>
-#include <stdarg.h>
-/**
- *_strlen - length of string
- *@s:string
- * Return: length
- */
-int _strlen(char *s)
-{
-	int length = 0;
-
-	while (s[length] != '\0')
-	{
-		length = length + 1;
-	}
-	return (length);
-}
-
 /**
  * _print_character - print a char
  * @arg: argument of type va_list
  * Return: always 1
  */
-int _print_character(va_list arg)
+int print_character(va_list arg)
 {
 	char ch;
 
@@ -30,17 +12,17 @@ int _print_character(va_list arg)
 	_putchar(ch);
 	return (1);
 }
-
 /**
  *_print_string - print a string
  *@arg: argument of type va_list
  * Return: len
  */
-int _print_string(va_list arg)
+int print_string(va_list arg)
 {
 	int len = 0;
-	char * str = va_arg(arg, char*);
+	char *str;
 	
+	str = va_arg(arg, char*);
 	if (str == NULL)
 		str = "(null)";
 
@@ -51,24 +33,22 @@ int _print_string(va_list arg)
 	}
 	return (len);
 }
-#include "holberton.h"
-#include <stdlib.h>
-#include <stdarg.h>
-int _strlen(char *s);
 /**
  *_print_rev_string - print reverse string
  *@arg: argument of type va_list
  * Return :count
  */
-int _print_rev_string(va_list arg)
+int print_rev_string(va_list arg)
 {
 	char *str;
-	int i = 0, count = 0;
+	int i = 0, count = 0, len;
 	
 	str = va_arg(arg, char*);
 	if (str == NULL)
 		str = "(llun(";
-	i = _strlen(str) - 1;
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	len = i - 1;
 	while (i >= 0)
 	{
 		_putchar(str[i]);
@@ -77,13 +57,12 @@ int _print_rev_string(va_list arg)
 	}
 	return (count);
 }
-#include <stdarg.h>
 /**
  * print_number -print number putchar
  * @arg: argument of type va_list
  * Return: count; 
  */
-int _print_integer(va_list arg)
+int print_integer(va_list arg)
 {
 	int count = 0, rest = 1;
 	unsigned int x;
@@ -114,7 +93,7 @@ int _print_integer(va_list arg)
  *@arg: argument of type va_list
  *Return:str
  */
-int _print_rot13(va_list arg)
+int print_rot13(va_list arg)
 {
 	char *str = va_arg(arg, int);
 	int i, j;
@@ -133,7 +112,7 @@ int _print_rot13(va_list arg)
 				break;
 			}
 		}
-			i++;
+		i++;
 	}
 	return (i);
 }

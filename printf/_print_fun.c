@@ -1,5 +1,5 @@
-#include "holberton.h"
-#include <stadlib.h>
+B#include "holberton.h"
+#include <stdlib.h>
 #include <stdarg.h>
 /**
  * _printf - print all (printf recreation)
@@ -10,8 +10,7 @@ int _printf(const char *format, ...)
 {
 	
 	va_list arg;
-	int (*fun)(va_list);
-	int i = 0, count = 0;
+	int i = 0, count = 0, fun = 0;
 
 	if (format == NULL)
 		return (-1);
@@ -24,19 +23,21 @@ int _printf(const char *format, ...)
 			count++;
 		}
 		if (*(format + i) == '%')
-			fun = check_char_func(*(format + (i + 1))
-		if (fun != NULL)
 		{
-			count = count + fun(va_list);
-			i = i + 2
-				continue;
+			fun = check_char_func(*(format + (i + 1)), arg);
+			if (fun != 0)
+			{
+				count = count + fun;
+				i = i + 2;
+					continue;
+			}
+			if (*(format + (i + 1)) == '\0')
+			{	
+				_putchar(*(format + i));
+				count++;
+			}
+			i++;
 		}
-		if (*(format + (i + 1)) == '\0')
-		{	
-			_putchar(*(format + i));
-			count++;
-		}
-		i++;
 	}
 	va_end(arg);
 	return (count);

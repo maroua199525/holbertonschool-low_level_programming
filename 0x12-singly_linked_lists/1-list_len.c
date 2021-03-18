@@ -1,4 +1,4 @@
-B#include "lists.h"
+#include "lists.h"
 /**
  *list_len - print a list
  *@h:pointer of type list_t;

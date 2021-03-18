@@ -1,13 +1,13 @@
 #include "lists.h"
-void __attribute__((constructor)) f_print(void);
+void __attribute__((constructor))print_first(void);
 
 /**
- *f_print - prints  before the main function
+ *print_first - prints before the main function
  *
  *Return: void
  */
 
-void f_print(void)
+void print_first(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");

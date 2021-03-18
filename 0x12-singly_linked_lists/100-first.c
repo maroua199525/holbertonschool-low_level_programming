@@ -1,8 +1,8 @@
-#include "lists.h"
+B#include "lists.h"
 void __attribute__((constructor)) f_print(void);
 
 /**
- * f_print - prints  before the main function 
+ *f_print - prints  before the main function
  *
  *Return: void
  */

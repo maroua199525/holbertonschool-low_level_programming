@@ -1,4 +1,4 @@
-B#include "lists.h"
+#include "lists.h"
 void __attribute__((constructor)) f_print(void);
 
 /**

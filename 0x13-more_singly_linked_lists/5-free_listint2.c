@@ -1,4 +1,4 @@
-B#include "lists.h"
+#include "lists.h"
 /**
  *free_listint2 - free the list
  *@head:struct of type list_t;

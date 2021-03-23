@@ -1,4 +1,4 @@
-B#include "lists.h"
+#include "lists.h"
 /**
  *pop_listint -  the list
  *@head:struct of type list_t;

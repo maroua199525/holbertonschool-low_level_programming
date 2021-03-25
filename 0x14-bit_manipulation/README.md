@@ -1,0 +1,1 @@
+Today we are going to learn about Bit manipulation? So, we are going to know how to manipulate bits and use bitwise operators?

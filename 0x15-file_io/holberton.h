@@ -1,4 +1,3 @@
-File Edit Options Buffers Tools C Help
 #ifndef HOLBERTON_FILE
 #define HOLBERTON_FILE
 #include <stdlib.h>

@@ -18,10 +18,6 @@ if (fd == -1)
 {   
 return (0);
 }
-if (buffer == NULL)
-{
-return (0);
-}
 rea = read(fd, buffer, letters);
 if (rea == -1)
 {

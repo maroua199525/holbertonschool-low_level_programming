@@ -1,0 +1,1 @@
+Hello again, in this project we will try to explain What is a dynamic library, how does it work, how to create one, and how to use it, and What are the differences between static and shared libraries..

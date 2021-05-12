@@ -1,3 +1,4 @@
+#include "Monty.h"
 /**
  * main - the main function.
  * @ac: arguments number.
@@ -7,7 +8,7 @@
 int main(int argc, char **argv)
 {
 	FILE *fp;
-	char *line = NULL;
+	char *line = NULL, *op_code = NULL;
 	size_t n = 0;
 	stack_t *stack = NULL;
 	int line_number;
@@ -21,7 +22,7 @@ int main(int argc, char **argv)
 	fp = fopen(argv[1], "r");
 	if (fp == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 
@@ -30,9 +31,9 @@ int main(int argc, char **argv)
 		op_code = strtok(line, "\n\t\r ");
 		if (op_code != NULL && op_code[0] != '#')
 		{
-			getfunc_monty(op_code, &stack, line_number)
+			getfunc_monty(op_code, &stack, line_number);
         }
 	}
-	free_list(&stack, fp, line);
+	free_stack(&stack, fp, line);
 	exit(EXIT_SUCCESS);
 }

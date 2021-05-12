@@ -1,4 +1,4 @@
-#include "monty.h"
+#include "Monty.h"
 
 /**
  * free_stack - Frees the stack.
@@ -17,7 +17,7 @@ void free_stack(stack_t **head, FILE *fp, char *line)
 		free(*head);
 		*head = ptr;
 	}
-	free(*head)
+	free(*head);
 	fclose(fp);
 	free(line);
 }

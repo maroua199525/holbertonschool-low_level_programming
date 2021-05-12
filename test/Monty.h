@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <unistd.h>
 /******************Struct************************/
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -33,12 +34,12 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 /****************Function***********************************/
-void func_push(stack_t **stack, int n);
+void func_push(stack_t **stack, unsigned int line_number);
 void func_pall(stack_t **stack, unsigned int line_number);
 void func_pint(stack_t **stack, unsigned int line_number);
 void func_nop(stack_t **head, unsigned int line_number);
 void func_swap(stack_t **stack, unsigned int line_number);
-void func_sub(stack_t **stack, unsigned int line_number);
+void func_sub(stack_t **head, unsigned int line_number);
 void func_add(stack_t **stack, unsigned int line_number);
 void getfunc_monty(char *op_code, stack_t **stack, unsigned int line_number);
 void free_stack(stack_t **head, FILE *fp, char *line);

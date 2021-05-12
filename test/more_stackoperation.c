@@ -10,12 +10,12 @@ void func_add(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-        fprintf(STDERR_FILENO, "L%d: can't add, stack too short\n", line_number);
+        fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
 		exit (EXIT_FAILURE);
 	}
 
-	sum = ((*head)->n) + (((*head)->next)->n);
-	(*head)->n = sum;
+	sum = ((*stack)->n) + (((*stack)->next)->n);
+	(*stack)->n = sum;
 }
 /**
  * _sub - subtracts the top element of the stack from the second top element of the stack
@@ -23,14 +23,14 @@ void func_add(stack_t **stack, unsigned int line_number)
  * @line_number: line number from file.
  * Return: nothing
  */
-void func_sub(stack_t **stack, unsigned int line_number)
+void func_sub(stack_t **head, unsigned int line_number)
 {
 	int sub = 0;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
-		fprintf(STDERR_FILENO, "L%d: can't sub, stack too short\n", line_number);
-		exit (EXIT_FAILURE)
+		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
+		exit (EXIT_FAILURE);
 	}
 
 	sub = (((*head)->next)->n) - ((*head)->n);

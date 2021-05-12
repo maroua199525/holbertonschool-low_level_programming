@@ -14,21 +14,21 @@ void getfunc_monty(char *op_code, stack_t **stack, unsigned int line_number)
         {"push", func_push},
 		{"pall", func_pall},
 		{"pint", func_pint},
-		{"pop", func_pop},
+		/*{"pop", func_pop},*/
 		{"swap", func_swap},
 		{"add", func_add},
 		{"nop", func_nop},
 		{"sub", func_sub},
-		{"div", func_div},
+		/*{"div", func_div},
 		{"mul", func_mul},
 		{"mod", func_mod},
 		{"pchar", func_pchar},
 		{"pstr", func_pstr},
 		{"rotl", func_rotl},
-		{"rotr", func_rotr},
+		{"rotr", func_rotr},*/
 		{NULL, NULL}
 	};
-    while (code[i].opocode != NULL)
+    while (code[i].opcode != NULL)
     {
         if (strcmp(code[i].opcode, op_code) == 0)
 		{

@@ -1,4 +1,4 @@
-#include "monty.h"
+#include "Monty.h"
 
 /**
  * push - pushes an element to the stack.
@@ -6,10 +6,12 @@
  * @line_number: line number in monty file
  * Return: void
  */
-void func_push(stack_t **stack, int n)
+void func_push(stack_t **stack, unsigned int line_number)
 {
+	(void)line_number;
 	stack_t *new_stack;
-    int element;
+	char *argv = NULL;
+    int element = atoi(argv);
 
 	new_stack = malloc(sizeof(stack_t));
 	if (new_stack == NULL)
@@ -56,7 +58,7 @@ void func_pint(stack_t **stack, unsigned int line_number)
 	stack_t *ptr;
     
     ptr = *stack;
-    if (tmp == NULL)
+    if (ptr == NULL)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty", line_number);
 		exit(EXIT_FAILURE);
@@ -85,7 +87,7 @@ void func_swap(stack_t **stack, unsigned int line_number)
 {
 	int num;
 
-	if ((*stack)v== NULL || (*stack)->next == NULL)
+	if ((*stack)== NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);

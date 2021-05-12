@@ -41,3 +41,5 @@ void func_swap(stack_t **stack, unsigned int line_number);
 void func_sub(stack_t **stack, unsigned int line_number);
 void func_add(stack_t **stack, unsigned int line_number);
 void getfunc_monty(char *op_code, stack_t **stack, unsigned int line_number);
+void free_stack(stack_t **head, FILE *fp, char *line);
+#endif

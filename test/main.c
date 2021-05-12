@@ -8,9 +8,9 @@ int main(int argc, char **argv)
 {
 	FILE *fp;
 	char *line = NULL;
-	size_t size = 0;
-	stack_t *head = NULL;
-	int line_number = 0;
+	size_t n = 0;
+	stack_t *stack = NULL;
+	int line_number;
     
     if (argc != 2)
 	{
@@ -25,14 +25,14 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 
-	for (line_number = 1; getline(&lineprt, &n, fd) != EOF; line_number++)
+	for (line_number = 1; getline(&line, &n, fp) != EOF; line_number++)
 	{
-		op_code = strtok(lineptr, "\n\t\r ");
+		op_code = strtok(line, "\n\t\r ");
 		if (op_code != NULL && op_code[0] != '#')
 		{
-			get_func(op_code, &stack, line_number)
+			getfunc_monty(op_code, &stack, line_number)
         }
 	}
-	free_list(&head, fp, line);
+	free_list(&stack, fp, line);
 	exit(EXIT_SUCCESS);
 }

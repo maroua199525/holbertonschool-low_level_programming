@@ -1,9 +1,13 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
 #include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 #include <unistd.h>
+#include <ctype.h>
 /******************Struct************************/
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -43,4 +47,6 @@ void func_sub(stack_t **head, unsigned int line_number);
 void func_add(stack_t **stack, unsigned int line_number);
 void getfunc_monty(char *op_code, stack_t **stack, unsigned int line_number);
 void free_stack(stack_t **head, FILE *fp, char *line);
+int is_digit(char *str);
+void add_node(stack_t **head, int n);
 #endif

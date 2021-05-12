@@ -1,35 +1,6 @@
 #include "Monty.h"
 
 /**
- * push - pushes an element to the stack.
- * @stack: stack
- * @line_number: line number in monty file
- * Return: void
- */
-void func_push(stack_t **stack, unsigned int line_number)
-{
-	(void)line_number;
-	stack_t *new_stack;
-	char *argv = NULL;
-    int element = atoi(argv);
-
-	new_stack = malloc(sizeof(stack_t));
-	if (new_stack == NULL)
-	{
-		fprintf(stderr, "Error: malloc failed");
-		exit(EXIT_FAILURE);
-	}
-	new_stack->n = element;
-	new_stack->prev = NULL;
-	new_stack->next = NULL;
-	if (*stack != NULL)
-	{
-		new_stack->next = *stack;
-		(*stack)->prev = new_stack;
-	}
-	*stack = new_stack;
-}
-/**
  * pall - print all data in stack
  * @stack: stack
  * @line_number: line number in monty .m file

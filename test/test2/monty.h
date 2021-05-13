@@ -1,5 +1,5 @@
-#ifndef _MONTY_
-#define _MONTY_
+#ifndef HEADER_FILE
+#define HEADER_FILE
 
 #include <stdio.h>
 #include <unistd.h>
@@ -50,7 +50,7 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void sub(stack_t **stack, unsigned int line_number);
-void divide(stack_t **stack, unsigned int line_number);
+void division(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 void mod(stack_t **stack, unsigned int line_number);
 /*int _strcmp(char *s1, char *s2);*/

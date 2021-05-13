@@ -20,7 +20,7 @@ void pall(stack_t **stack, unsigned int line_number)
 /**
  *pint - prints the top value of the stack
  *@stack: pointer to the top of the stack
- *@line_number: the line number of the command being run
+ *@line_number: the line number of the command interpted
  *
  *Return: void
  */
@@ -36,7 +36,7 @@ void pint(stack_t **stack, unsigned int line_number)
 /**
  *nop - does nothing
  *@stack: pointer to the top of the stack
- *@line_number: the line number of the command being run
+ *@line_number: the line number of the command interpted
  *
  *Return: void
  */

@@ -62,13 +62,13 @@ void sub(stack_t **stack, unsigned int line_number)
 }
 
 /**
- *divide - divides the second top element by the top element of the stack
+ *division - divides the second top element by the top element of the stack
  *@stack: pointer to the top of the stack
  *@line_number: the line number intrepted
  *
  *Return: void
  */
-void divide(stack_t **stack, unsigned int line_number)
+void division(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp = *stack;
 	int div;

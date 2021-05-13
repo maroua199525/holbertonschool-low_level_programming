@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- *push - pushes a value onto the stack
+ *push - pushes an element to the stack.
  *@stack: pointer to the top of the stack
- *@line_number: the line number of the command being run
+ *@line_number: the line number of the command interpted
  *
  *Return: void
  */
@@ -66,15 +66,15 @@ void push(stack_t **stack, unsigned int line_number)
 }
 
 /**
- *pop - deletes the top value off of the stack
+ *pop -  removes the top element of the stack
  *@stack: pointer to the top of the stack
- *@line_number: the line number of the command being run
+ *@line_number: the line number of the command interpted
  *
  *Return: void
  */
 void pop(stack_t **stack, unsigned int line_number)
 {
-	stack_t *temp = *stack;
+	stack_t *tmp = *stack;
 
 	if (*stack == NULL)
 	{
@@ -88,33 +88,33 @@ void pop(stack_t **stack, unsigned int line_number)
 	}
 	else
 		*stack = NULL;
-	free(temp);
+	free(tmp);
 }
 
 /**
  *swap - swaps the top two values of the stack
  *@stack: pointer to the top of the stack
- *@line_number: the line number of the command being run
+ *@line_number: the line number of the command interpted
  *
  *Return: void
  */
 void swap(stack_t **stack, unsigned int line_number)
 {
-	int temp;
-	int nodes = 0;
-	stack_t *iterator = *stack;
+	int tmp;
+	int count = 0;
+	stack_t *ptr = *stack;
 
-	while (iterator != NULL)
+	while (ptr != NULL)
 	{
-		nodes++;
-		iterator = iterator->next;
+		count++;
+		ptr = ptr->next;
 	}
-	if (nodes < 2)
+	if (count < 2)
 	{
 		printf("L%u: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	temp = (*stack)->n;
+	tmp = (*stack)->n;
 	(*stack)->n = (*stack)->next->n;
-	(*stack)->next->n = temp;
+	(*stack)->next->n = tmp;
 }

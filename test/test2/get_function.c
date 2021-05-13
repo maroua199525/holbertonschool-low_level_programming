@@ -20,7 +20,7 @@ void get_func(stack_t **stack, unsigned int line_number, char *opcode)
         {"add", add},
 		{"nop", nop}, 
         {"sub", sub}, 
-        {"div", divide},
+        {"div", division},
 		{"mul", mul}, 
         {"mod", mod},
 		{NULL, NULL}

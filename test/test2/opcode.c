@@ -8,8 +8,9 @@ char *get_opcode(void)
 {
 	int i = 0, j = 0;
 	char *buffer;
+    size_t len = 20;
 
-	buffer = malloc(sizeof(char) * 10);
+	buffer = malloc(sizeof(char) * len);
 	if (buffer == NULL)
 		return (NULL);
 

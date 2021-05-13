@@ -38,9 +38,15 @@ int main(int argc, char **argv)
 		read = getline(&line, &size, file);
 		line_number++;
 		while (line[j] == ' ')
+		{
 			j++;
+		}
 		while (line[i] != '\n' && line[i] != '\0')
+		{
 			i++;
+		}
+		if (line[j] == '\n' || line[j] == '#')
+			continue;
 		line[i] = '\0';
 		if (line[0] == '\0')
 			break;

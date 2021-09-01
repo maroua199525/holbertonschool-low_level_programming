@@ -22,12 +22,12 @@ int linear_search(int *array, size_t size, int value)
 		if (array[i] == value)
 		{
 			index = i;
+			break;
 
 		}
 		else
 		{
 			index = -1;
-			break;
 		}
 		i++;
 	}
